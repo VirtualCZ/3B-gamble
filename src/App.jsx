@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 const adam = ["Database", "Legenda", "Dokumentace"];
-const adam2 = ["E-Mail: veleadam226@gmail.com", "Class: 3B (2021/22)", "School: OAUH"]
+const adam2 = ["E-Mail: veleadam226@gmail.com", "Class: 3B (2021/22)", "School: OAUH",  "..."]
 const tomas = ["CSS", "Design", "JS", "Authors page"];
-const tomas2 = ["E-Mail: thomas2654cz@gmail.com", "Class: 3B (2021/22)", "School: OAUH", "funguj kurwa", "funguj kurwa 2", "dik Gite"]
+const tomas2 = ["E-Mail: thomas2654cz@gmail.com", "Class: 3B (2021/22)", "School: OAUH", "..."]
 
 export default function App() {
   return (

@@ -5,6 +5,8 @@ const navigation_array = [
   { name: 'Upgrader', to: "/upgrader" },
   { name: 'Contracts', to: "/contracts" },
 ]
+var username = ["User"]
+var tokens = [100]
 
 export default function Navbar() {
   return (
@@ -15,7 +17,7 @@ export default function Navbar() {
         <div>
         {navigation_array.map(item => (
                     <Link class="p-1.5 px-2 mr-2 ml-1 box-content rounded-cool bg-slate-700 
-                    hover:text-orange-300 hover:bg-slate-600
+                    hover:text-orange-300 hover:bg-gray-700
                     transition-all" 
                       to={item.to}
                     >
@@ -27,7 +29,7 @@ export default function Navbar() {
         {/* Nazev stranky */}
         <div>
           <Link class="p-1.5 px-2 mr-2 ml-1 box-content rounded-cool bg-slate-700 
-          hover:text-orange-300 hover:bg-slate-600
+          hover:text-orange-300 hover:bg-gray-700
           transition-all" 
           to="/"
           >
@@ -36,14 +38,20 @@ export default function Navbar() {
         </div>
 
         {/* Odkaz na uzivatele + tokeny */}
-        <div>
-          <Link class="p-1.5 px-2 mr-2 ml-1 box-content rounded-cool bg-slate-700 
-          hover:text-orange-300 hover:bg-slate-600
-          transition-all" 
-          to="/inventory">
-            UserPlaceholder
-          </Link>
-        </div>
+          <div class="divide-x p-1.5 px-2 mr-2 ml-1 box-content rounded-cool bg-slate-700 hover:bg-gray-700 transition-all ">
+            <Link  
+            class="pr-1.5 hover:text-orange-500
+            transition-all"
+            to="/inventory">
+            {tokens} Tokens
+            </Link>
+            <Link 
+            class="pl-1.5 hover:text-orange-500
+            transition-all"
+            to="/inventory">
+            {username}
+            </Link>
+          </div>
 
       </nav>
     </div>

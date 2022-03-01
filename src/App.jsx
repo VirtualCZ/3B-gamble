@@ -21,7 +21,7 @@ export default function App() {
           <div class="flex">
           {adam.map(item => (
                     <h1 class=" p-1.5 px-2 m-2 box-content rounded-cool bg-slate-700 
-                    hover:text-orange-300 hover:bg-slate-600
+                    hover:text-orange-300 hover:bg-gray-700
                     transition-all" 
                     >
                       {item}
@@ -31,7 +31,7 @@ export default function App() {
           <div class="flex justify-items-stretch align-start">
           {adam2.map(item => (
                     <h1 class=" p-1.5 px-2 m-2 box-content rounded-cool bg-slate-700 
-                    hover:text-orange-300 hover:bg-slate-600
+                    hover:text-orange-300 hover:bg-gray-700
                     transition-all" 
                     >
                       {item}
@@ -47,7 +47,7 @@ export default function App() {
           <div class="flex">
             {tomas.map(item => (
                     <h1 class="p-1.5 px-2 m-2 box-content rounded-cool bg-slate-700 
-                    hover:text-orange-300 hover:bg-slate-600
+                    hover:text-orange-300 hover:bg-gray-700
                     transition-all" 
                     >
                       {item}
@@ -58,7 +58,7 @@ export default function App() {
           <div class="flex justify-items-stretch align-start">
           {adam2.map(item => (
                     <h1 class=" p-1.5 px-2 m-2 box-content rounded-cool bg-slate-700 
-                    hover:text-orange-300 hover:bg-slate-600
+                    hover:text-orange-300 hover:bg-gray-700
                     transition-all" 
                     >
                       {item}

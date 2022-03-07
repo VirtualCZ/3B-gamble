@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
+import React, { useState } from 'react';
 
 const navigation_array = [
   { name: 'Cases', to: "/cases"},
   { name: 'Upgrader', to: "/upgrader" },
   { name: 'Contracts', to: "/contracts" },
 ]
-var username = ["User"]
-var tokens = [100]
-
+var username = ["User"];
 export default function Navbar() {
+  const [tokens , setTokens] = useState(100)
   return (
     <div>
       <nav class="bg-slate-800 text-gray-200 h-14 flex items-center rounded-cool flex-row mb-1.5 ">
@@ -38,21 +38,23 @@ export default function Navbar() {
         </div>
 
         {/* Odkaz na uzivatele + tokeny */}
-          <div class="basis-1/3 flex justify-end">
-            <div class="bg-slate-700 hover:bg-gray-700 transition-all divide-x p-1.5 px-2 mr-2 ml-1 box-content rounded-cool">
-            <Link  
-            class="pr-1.5 hover:text-orange-500
-            transition-all"
-            to="/inventory">
-            {tokens} Tokens
-            </Link>
-            <Link 
-            class="pl-1.5 hover:text-orange-500
-            transition-all"
-            to="/inventory">
-            {username}
-            </Link>
-          </div>
+          <div class="basis-1/3 flex flex-row justify-end">
+            <div class="bg-slate-700 hover:bg-gray-700 transition-all divide-x py-1.5 px-2 mr-2 ml-1 box-content rounded-cool flex flex-row">
+              <button class="pr-1.5 hover:text-orange-500
+              transition-all" onClick={()=>setTokens(tokens+1000)}>Add Tokens</button>              
+              <p
+              class="px-1.5 hover:text-orange-500 
+              transition-all"
+              >
+                {tokens} Tokens
+              </p>
+              <Link 
+              class="pl-1.5 hover:text-orange-500
+              transition-all"
+              to="/inventory">
+                {username}
+              </Link>
+            </div>
           </div>
 
       </nav>

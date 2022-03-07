@@ -1,45 +1,28 @@
 import { Link } from "react-router-dom";
 import tokens from "../navbar"
+import React, { useState } from 'react';
 
 const cases_list = [
   { img: "src/images/chroma.webp", name: "Chroma Case", price: 150},
   { img: "src/images/chroma2.webp", name: "Chroma 2 Case", price: 150},
   { img: 'src/images/chroma3.webp', name: "Chroma 3 Case", price: 200},
   { img: 'src/images/clutch.webp', name: "Clutch Case", price: 500},
-  { img: 'src/images/csgow.webp', name: "CSGO Weapon Case", price: 1380},
-  { img: 'src/images/csgow2.webp', name: "CSGO Weapon Case 2", price: 300},
-  { img: 'src/images/csgow3.webp', name: "CSGO Weapon Case 3", price: 150},
   { img: 'src/images/cs20.webp', name: "CS20 Case", price: 200},
   { img: 'src/images/dangerzone.webp', name: "Danger Zone Case", price: 200},
-  { img: 'src/images/dnn.webp', name: "Dreams and Nightmares", price: 200},
-  { img: 'src/images/falchion.webp', name: "Falchion Case", price: 150},
+  { img: 'src/images/dnn.webp', name: "Dreams & Nightmares", price: 200},
   { img: 'src/images/fracture.webp', name: "Fracture Case", price: 200},
   { img: 'src/images/gamma.webp', name: "Gamma Case", price: 200},
   { img: 'src/images/gamma.webp', name: "Gamma 2 Case", price: 200},
   { img: 'src/images/glove.webp', name: "Glove Case", price: 200},
   { img: 'src/images/horizon.webp', name: "Horizon Case", price: 200},
   { img: 'src/images/huntsman.webp', name: "Huntsman Case", price: 150},
-  { img: 'src/images/bravo.webp', name: "Operation Bravo Case", price: 490},
-  { img: 'src/images/breakout.webp', name: "Operation Breakout Case", price: 150},
   { img: 'src/images/phoenix.webp', name: "Operation Phoenix Case", price: 150},
-  { img: 'src/images/vanguard.webp', name: "Operation Vanguard Case", price: 150},
+  { img: 'src/images/riptide.webp', name: "Operation Riptide Case", price: 200},
   { img: 'src/images/prisma.webp', name: "Prisma Case", price: 200},
   { img: 'src/images/prisma2.webp', name: "Prisma 2 Case", price: 150},
   { img: 'src/images/revolver.webp', name: "Revolver Case", price: 150},
-  { img: "src/images/riptide.webp", name: "Riptide Case", price: 200},
-  { img: "src/images/snakebite.webp", name: "Snakebite Case", price: 200},
   { img: 'src/images/shadow.webp', name: "Shadow Case", price: 150},
-  { img: "src/images/shattered_web.webp", name: "Shattered Web Case", price: 150},
-  { img: 'src/images/spectrum.webp', name: "Spectrum Case", price: 200},
-  { img: 'src/images/wildfire.webp', name: "Wildfire Case", price: 150},
-  { img: 'src/images/winter_offensive.webp', name: "Winter Offensive Case", price: 150},
-  
-  { img: 'src/images/esports_2013.webp', name: "eSports 2013 Case", price: 300},
-  { img: 'src/images/esports_winter_2013.webp', name: "eSports 2013 Winter Case", price: 150},
-  { img: 'src/images/esports_summer_2014.webp', name: "eSports 2014 Summer Case", price: 150},
-]
-const cases2_list = [
-  { img: 'src/images/knives.webp', name: "Knives Mix Case", price: 9900},
+  { img: 'src/images/shattered_web.webp', name: "Shattered Web Case", price: 150},
 ]
 
 export default function Cases() {
@@ -59,28 +42,18 @@ export default function Cases() {
                     <h1 class="hover:text-orange-300">
                       {item.name}
                     </h1>
-                    <h1 class="hover:text-orange-300">
-                      {item.price} Tokens
-                    </h1>
-                  </div>
-          ))}
-        </div>
-        <h1 className="py-2 text-4xl font-bold text-slate-200">
-          Cases 2 💼
-        </h1>
-        <div class="grid-cols-5 grid pt-2">
-          {cases2_list.map(item => (
-                  <div class=" cursor-pointer p-1.5 px-2 m-2 box-content rounded-cool bg-slate-700 
-                  hover:bg-gray-700 hover:m-0.5 hover:border-2 hover:border-white-200
-                  transition-all" 
-                  onclick="myFunction()">
-                    <img class="" src={item.img} alt={item.img}/>
-                    <h1 class="hover:text-orange-300">
-                      {item.name}
-                    </h1>
-                    <h1 class="hover:text-orange-300">
-                      {item.price} Tokens
-                    </h1>
+                    <div class="flex flex-col-2">
+                      <h1 class="hover:text-orange-300 flex basis-1/2">
+                        {item.price} Tokens
+                      </h1>
+                      <div class="basis-1/2 flex justify-end">
+                        <button class="text-slate-900 hover:text-orange-300 hover:bg-slate-600 hover:border-2 hover:border-white-200 bg-orange-300 rounded-cool px-2 py-0.25 hover:m-0.5 transition-all"
+                          onClick={()=>setTokens(tokens+1000)}
+                        >
+                          Buy
+                        </button>
+                      </div>
+                    </div>
                   </div>
           ))}
         </div>

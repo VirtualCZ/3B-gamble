@@ -5,6 +5,7 @@ const navigation_array = [
   { name: 'Cases', to: "/cases"},
   { name: 'Upgrader', to: "/upgrader" },
   { name: 'Contracts', to: "/contracts" },
+  { name: 'Cases (old)', to: "/cases_old"}
 ]
 var username = ["User"];
 export default function Navbar() {

@@ -36,8 +36,7 @@ export default function Cases_old() {
           {cases_list.map(item => (
                   <div class=" cursor-pointer p-1.5 px-2 m-2 box-content rounded-cool bg-slate-700 
                   hover:bg-gray-700 hover:m-0.5 hover:border-2 hover:border-white-200
-                  transition-all" 
-                  onclick="myFunction()">
+                  transition-all" >
                     <img class="" src={item.img} alt={item.img}/>
                     <h1 class="hover:text-orange-300">
                       {item.name}

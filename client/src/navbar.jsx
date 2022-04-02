@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
+import currentUser from './routes/accounts'
 
 const navigation_array = [
   { name: 'Cases', to: "/cases"},
   { name: 'Upgrader', to: "/upgrader" },
   { name: 'Contracts', to: "/contracts" },
-  { name: 'Cases (old)', to: "/cases_old"}
+  { name: 'Cases (old)', to: "/cases_old"},
+  { name: 'Account', to: "/accounts"},
 ]
 var username = ["User"];
 export default function Navbar() {
@@ -53,7 +55,7 @@ export default function Navbar() {
               class="pl-1.5 hover:text-orange-500
               transition-all"
               to="/inventory">
-                {username}
+                {currentUser}
               </Link>
             </div>
           </div>
